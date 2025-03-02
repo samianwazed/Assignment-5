@@ -8,3 +8,6 @@ const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FF33A8", "#A833FF"
           index = 0;
         }
       })
+
+// Completed Button click event listener
+

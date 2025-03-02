@@ -1,4 +1,10 @@
 .poppins-font {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-  }  
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+.disabled {
+  background-color: #e0e0e0; /* Light grayish white */
+  color: #b0b0b0; /* Faded text color */
+  cursor: not-allowed;
+}
