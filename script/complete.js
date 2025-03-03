@@ -10,24 +10,36 @@ let taskRemainingConverted = parseFloat(taskRemaining);
 const historyContainer = document.getElementById('history-container')
 for(let i = 0; i < buttons.length; i++){
     buttons[i].addEventListener('click', function(event){
-        alert("Board Updated Successfully");
+        let button = event.target;
+        if (button.hasAttribute("disabled")) {
+            return;
+        }
         buttons[i].classList.add('disabled');
-        let totalAfterComplete = taskCompletedConverted++;
-        document.getElementById('total-task-completed').innerText = totalAfterComplete +1 ;
+        button.setAttribute("disabled", "true");
+        alert("Board Updated Successfully");
+        taskCompletedConverted += 1;
+        document.getElementById('total-task-completed').innerText = taskCompletedConverted ;
 
-        let totalRemaining = taskRemaining--;
-        document.getElementById('task-remaining').innerText = totalRemaining - 1;
+        taskRemainingConverted -= 1;
+        document.getElementById('task-remaining').innerText = taskRemainingConverted;
 
-        
-        const p = document.createElement("p");
-        p.innerText = `
-        You have Complete a task at Eto PM
-        `
-        console.log(p);
-        historyContainer.appendChild(p);
+        const taskName = document.getElementsByClassName('task-name');
+        let completedTime = new Date().toLocaleTimeString();
+        let taskContainer = event.target.closest(".task-item"); // Assuming each task button is inside .task-item
+        let taskIndividual = taskContainer.querySelector(".task-name").innerText;
+            const p = document.createElement("p");
+            p.innerText = `
+            You have Completed ${taskIndividual} task at ${completedTime}
+            `
+            historyContainer.appendChild(p);
+          
 
+            if(taskRemainingConverted === 0){
+                alert("Congrats!!! You have completed all the current tasks")
+            }
     })
 }
+
 
 
 

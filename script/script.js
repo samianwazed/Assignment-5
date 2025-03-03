@@ -1,4 +1,4 @@
-const colors = ["#FF5733", "#33FF57", "#3357FF", "#F333FF", "#FF33A8", "#A833FF", "#33FFF6", "#F6FF33", "#FF8C33", "#33FF8C", "#ffffff"];
+const colors = ["#33ffe9", "#58f0ff", "#00e8ff", "#00b9ff", "#0078ff", "#4a8cd6", "#091ffc", "#8309fc", "#a709fc", "#e209fc", "#ffffff"];
       let index = 0;
 
       document.getElementById('theme-btn').addEventListener("click", function(){

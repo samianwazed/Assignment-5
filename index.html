@@ -68,7 +68,7 @@
               </h2>
             </div>
             <div
-              class="flex gap-5 py-6 px-5 w-64 h-[125px] bg-[#F4F7FF] rounded-xl"
+              class="flex gap-5 py-6 px-5 w-64 h-[125px] bg-[#F4F7FF] rounded-xl justify-center items-center"
             >
               <img
                 src="assets/calender.png"
@@ -76,8 +76,7 @@
                 class="w-7 h-7 m-4 rounded-full"
               />
               <div class="">
-                <p class="">Wed,</p>
-                <h2 class="font-bold text-3xl">Jul 28 2025</h2>
+                <p id="date" class="text-2xl"></p>
               </div>
             </div>
           </section>
@@ -86,9 +85,9 @@
               class="grid grid-cols-3 gap-9 mx-6 my-8 pb-9 border-none rounded-2xl"
             >
               <!-- card no-1 -->
-              <div class="bg-slate-100 p-6 rounded-2xl">
+              <div class="bg-slate-100 p-6 rounded-2xl task-item">
                 <p class="px-4 py-2 w-28 rounded-lg bg-white">ShopEase</p>
-                <h1 class="text-2xl font-semibold my-4">
+                <h1 class="text-2xl font-semibold my-4 task-name">
                   Fix Mobile Button Issue
                 </h1>
                 <p class="truncate p-4 bg-white mb-6 rounded-lg opacity-50">
@@ -109,9 +108,9 @@
                 </div>
               </div>
               <!-- card no-2 -->
-              <div class="bg-slate-100 p-6 rounded-2xl">
+              <div class="bg-slate-100 p-6 rounded-2xl task-item">
                 <p class="px-4 py-2 w-28 rounded-lg bg-white">CloudSync</p>
-                <h1 class="text-2xl font-semibold my-4">Add Dark Mode</h1>
+                <h1 class="text-2xl font-semibold my-4 task-name">Add Dark Mode</h1>
                 <p class="truncate p-4 bg-white mb-6 rounded-lg opacity-50">
                   Store the user's preference in <br />
                   localStorage, update CSS variables dynamically, and apply a
@@ -130,9 +129,9 @@
                 </div>
               </div>
               <!-- card no-3 -->
-              <div class="bg-slate-100 p-6 rounded-2xl">
+              <div class="bg-slate-100 p-6 rounded-2xl task-item">
                 <p class="px-4 py-2 w-28 rounded-lg bg-white">SwiftPay</p>
-                <h1 class="text-2xl font-semibold my-4">Optimize Home page </h1>
+                <h1 class="text-2xl font-semibold my-4 task-name">Optimize Home page </h1>
                 <p class="truncate p-4 bg-white mb-6 rounded-lg opacity-50">
                   Debug using Chrome <br />
                   DevTools, check for overlapping elements, and ensure onClick
@@ -151,9 +150,9 @@
                 </div>
               </div>
               <!-- card no-4 -->
-              <div class="bg-slate-100 p-6 rounded-2xl">
+              <div class="bg-slate-100 p-6 rounded-2xl task-item">
                 <p class="px-4 py-2 w-28 rounded-lg bg-white">Meta</p>
-                <h1 class="text-2xl font-semibold my-4">Add new emoji 🤲</h1>
+                <h1 class="text-2xl font-semibold my-4 task-name">Add new emoji 🤲</h1>
                 <p class="truncate p-4 bg-white mb-6 rounded-lg opacity-50">
                   Debug using Chrome <br />
                   DevTools, check for overlapping elements, and ensure onClick
@@ -172,9 +171,9 @@
                 </div>
               </div>
               <!-- card no-5 -->
-              <div class="bg-slate-100 p-6 rounded-2xl">
+              <div class="bg-slate-100 p-6 rounded-2xl task-item">
                 <p class="px-4 py-2 w-32 rounded-lg bg-white">Google LLC</p>
-                <h1 class="text-2xl font-semibold my-4">
+                <h1 class="text-2xl font-semibold my-4 task-name">
                   Integrate OpenAI API
                 </h1>
                 <p class="truncate p-4 bg-white mb-6 rounded-lg opacity-50">
@@ -195,9 +194,9 @@
                 </div>
               </div>
               <!-- card no-6 -->
-              <div class="bg-slate-100 p-6 rounded-2xl">
+              <div class="bg-slate-100 p-6 rounded-2xl task-item">
                 <p class="px-4 py-2 w-28 rounded-lg bg-white">Glassdoar</p>
-                <h1 class="text-2xl font-semibold my-4">
+                <h1 class="text-2xl font-semibold my-4 task-name">
                   Improve Job searching
                 </h1>
                 <p class="truncate p-4 bg-white mb-6 rounded-lg opacity-50">
@@ -228,13 +227,13 @@
           </div>
           <div class="flex justify-center mt-4 mb-10">
             <button
-              class="btn bg-[#3752FD] w-[150px] text-white py-[10px] px-5 rounded-lg"
+              class="btn bg-[#3752FD] w-[150px] text-white py-[10px] px-5 rounded-lg" id="clear-history-btn"
             >
               Clear History
             </button>
           </div>
           <!-- Task Completion History Details -->
-          <div class="" id="history-container"> 
+          <div class="bg-slate-100 items-center" id="history-container"> 
             
           </div>
         </div>
@@ -244,5 +243,6 @@
     <script src="script/script.js"></script>
     <script src="script/discover.js"></script>
     <script src="script/complete.js"></script>
+    <script src="script/history.js"></script>
   </body>
 </html>
